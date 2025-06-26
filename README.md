@@ -1,29 +1,40 @@
-# Create T3 App
+# TanStack Form + Zod + Next.js 15 Demo
 
-This is a [T3 Stack](https://create.t3.gg/) project bootstrapped with `create-t3-app`.
+A minimal public showcase of modern, type-safe form handling in React/Next.js using **TanStack Form** with **Zod** validation and **shadcn/ui** components.
 
-## What's next? How do I make an app with this?
+---
 
-We try to keep this project as simple as possible, so you can start with just the scaffolding we set up for you, and add additional things later when they become necessary.
+## Tech Stack
 
-If you are not familiar with the different technologies used in this project, please refer to the respective docs. If you still are in the wind, please join our [Discord](https://t3.gg/discord) and ask for help.
+| Tool              | Version | Why it’s here                             |
+| ----------------- | ------- | ----------------------------------------- |
+| **Next.js**       | 15.3    | Latest stable with App Router & Turbopack |
+| **React**         | 19.1    | Concurrent features & Actions API         |
+| **TypeScript**    | 5.5     | Strict typing everywhere                  |
+| **TanStack Form** | 1.12.3  | Headless, tiny, type-safe forms           |
+| **Zod**           | 4.x     | Compile- & runtime-safe validation        |
+| **shadcn/ui**     | 2.6.x   | Accessible, Radix-based UI primitives     |
+| **Tailwind CSS**  | 4       | Utility-first styling                     |
 
-- [Next.js](https://nextjs.org)
-- [NextAuth.js](https://next-auth.js.org)
-- [Prisma](https://prisma.io)
-- [Drizzle](https://orm.drizzle.team)
-- [Tailwind CSS](https://tailwindcss.com)
-- [tRPC](https://trpc.io)
+---
 
-## Learn More
+## Why TanStack Form instead of React Hook Form?
 
-To learn more about the [T3 Stack](https://create.t3.gg/), take a look at the following resources:
+- **First-class TypeScript** generics → fully-typed field & submit payloads.
+- **Zero dependencies & headless** design keeps bundles lean; bring your own UI.
+- **Composable API** feels like TanStack Query—subscribe only to what you need.
+- **Granular re-render control** via field subscriptions.
+- **Framework-agnostic core** (React, Vue, Solid, Svelte, etc.).
 
-- [Documentation](https://create.t3.gg/)
-- [Learn the T3 Stack](https://create.t3.gg/en/faq#what-learning-resources-are-currently-available) — Check out these awesome tutorials
+---
 
-You can check out the [create-t3-app GitHub repository](https://github.com/t3-oss/create-t3-app) — your feedback and contributions are welcome!
+## Why Zod for validation?
 
-## How do I deploy this?
+- **Single source of truth**: schema powers both TS types and runtime checks.
+- **Tiny & tree-shakeable** compared to Yup/Joi.
+- Excellent **integration with TanStack Form’s `schema` option**.
+- Superb error-handling and custom refinement support.
 
-Follow our deployment guides for [Vercel](https://create.t3.gg/en/deployment/vercel), [Netlify](https://create.t3.gg/en/deployment/netlify) and [Docker](https://create.t3.gg/en/deployment/docker) for more information.
+---
+
+## Folder Structure
