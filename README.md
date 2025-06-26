@@ -8,12 +8,12 @@ A minimal public showcase of modern, type-safe form handling in React/Next.js us
 
 | Tool              | Version | Why it’s here                             |
 | ----------------- | ------- | ----------------------------------------- |
-| **Next.js**       | 15.3    | Latest stable with App Router & Turbopack |
-| **React**         | 19.1    | Concurrent features & Actions API         |
-| **TypeScript**    | 5.5     | Strict typing everywhere                  |
+| **Next.js**       | 15      | Latest stable with App Router & Turbopack |
+| **React**         | 19      | Concurrent features & Actions API         |
+| **TypeScript**    | 5.8     | Strict typing everywhere                  |
 | **TanStack Form** | 1.12.3  | Headless, tiny, type-safe forms           |
-| **Zod**           | 4.x     | Compile- & runtime-safe validation        |
-| **shadcn/ui**     | 2.6.x   | Accessible, Radix-based UI primitives     |
+| **Zod**           | 3.x     | Compile- & runtime-safe validation        |
+| **shadcn/ui**     |         | Accessible, Radix-based UI primitives     |
 | **Tailwind CSS**  | 4       | Utility-first styling                     |
 
 ---
