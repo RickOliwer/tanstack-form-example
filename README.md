@@ -20,11 +20,17 @@ A minimal public showcase of modern, type-safe form handling in React/Next.js us
 
 ## Why TanStack Form instead of React Hook Form?
 
-- **First-class TypeScript** generics → fully-typed field & submit payloads.
-- **Zero dependencies & headless** design keeps bundles lean; bring your own UI.
-- **Composable API** feels like TanStack Query—subscribe only to what you need.
-- **Granular re-render control** via field subscriptions.
-- **Framework-agnostic core** (React, Vue, Solid, Svelte, etc.).
+- **First-class TypeScript** support — fully typed field and submit payloads.
+- **Zero dependencies & headless** — keep your bundle lean and bring your own UI.
+- **Composable API** — similar to TanStack Query; subscribe only to what you need.
+- **Fine-grained re-render control** using field-level subscriptions.
+- **Framework-agnostic core** — works with React, Vue, Svelte, Solid, and more.
+
+Though I’ve used React Hook Form in many projects and it has served me well, I can’t ignore what TanStack Form has to offer. It’s small (around 9 kB gzipped), has no runtime dependencies, and gives me full control over how my forms behave — without relying on hidden context or magic.
+
+It uses `@tanstack/store` under the hood, which means I can subscribe to specific fields and avoid unnecessary re-renders. That alone has solved a few headaches I’ve run into with React Hook Form in the past.
+
+The API is fully type-safe with excellent TypeScript support, and since I already work a lot with TanStack Query, the developer experience feels familiar. It’s headless, composable, and doesn’t lock me into a specific UI — which makes it a great fit for how I like to build.
 
 ---
 
