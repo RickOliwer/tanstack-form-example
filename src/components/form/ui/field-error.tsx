@@ -1,5 +1,5 @@
 import type { AnyFieldMeta } from "@tanstack/react-form";
-import { ZodError } from "zod";
+import type { ZodError } from "zod";
 
 type FieldErrorsProps = {
   meta: AnyFieldMeta;
