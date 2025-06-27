@@ -1,6 +1,5 @@
 "use client";
 import { useAppForm } from "@/components/form/hook/useAppForm";
-import { defaultLoginValues, LoginSchema } from "@/types/login";
 import {
   Card,
   CardAction,
@@ -10,12 +9,13 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import { defaultSignUpValues, SignUpSchema } from "@/types/sign-up";
 
 export const SignUp = () => {
   const form = useAppForm({
-    defaultValues: defaultLoginValues,
+    defaultValues: defaultSignUpValues,
     validators: {
-      onChange: LoginSchema,
+      onChange: SignUpSchema,
     },
     onSubmit: async ({ value }) => {
       await new Promise((res) => setTimeout(res, 1000));
@@ -45,6 +45,28 @@ export const SignUp = () => {
       >
         <CardContent className="">
           <div className="flex w-full flex-col gap-6">
+            <div className="grid grid-cols-2 gap-4">
+              <form.AppField name="firstName">
+                {(field) => (
+                  <field.TextField
+                    label="First Name"
+                    placeholder="First Name"
+                    disablFieldError
+                  />
+                )}
+              </form.AppField>
+
+              <form.AppField name="lastName">
+                {(field) => (
+                  <field.TextField
+                    label="Last Name"
+                    placeholder="Last Name"
+                    disablFieldError
+                  />
+                )}
+              </form.AppField>
+            </div>
+
             <form.AppField name="email">
               {(field) => (
                 <field.TextField
