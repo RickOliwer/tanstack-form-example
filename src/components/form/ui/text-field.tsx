@@ -19,8 +19,8 @@ export const TextField = ({
   const field = useFieldContext<string>();
 
   return (
-    <div className="space-y-2">
-      <div className="space-y-1">
+    <div className="grid gap-2">
+      <div className="grid gap-1">
         <Label htmlFor={field.name} className={labelHidden ? "sr-only" : ""}>
           {label}
         </Label>

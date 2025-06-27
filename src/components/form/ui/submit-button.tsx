@@ -11,7 +11,11 @@ export function SubmitButton({ children }: { children: React.ReactNode }) {
   ]);
 
   return (
-    <Button type="submit" disabled={isSubmitting || !canSubmit}>
+    <Button
+      type="submit"
+      disabled={isSubmitting || !canSubmit}
+      className="w-full"
+    >
       {isSubmitting ? (
         <>
           {children}
