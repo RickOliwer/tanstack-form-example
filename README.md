@@ -1,46 +1,39 @@
 # TanStack Form + Zod + Next.js 15 Demo
 
-A minimal public showcase of modern, type-safe form handling in React/Next.js using **TanStack Form** with **Zod** validation and **shadcn/ui** components.
+This is a small public demo where I explore building modern, type-safe forms using **TanStack Form**, **Zod**, and **shadcn/ui**, all inside a Next.js 15 project.
+
+I’ve used React Hook Form in many projects, but wanted to try something more explicit and type-driven — and TanStack Form delivers exactly that.
 
 ---
 
 ## Tech Stack
 
-| Tool              | Version | Why it’s here                             |
+| Tool              | Version | Why I’m using it                          |
 | ----------------- | ------- | ----------------------------------------- |
-| **Next.js**       | 15      | Latest stable with App Router & Turbopack |
-| **React**         | 19      | Concurrent features & Actions API         |
-| **TypeScript**    | 5.8     | Strict typing everywhere                  |
-| **TanStack Form** | 1.12.3  | Headless, tiny, type-safe forms           |
-| **Zod**           | 3.x     | Compile- & runtime-safe validation        |
-| **shadcn/ui**     |         | Accessible, Radix-based UI primitives     |
+| **Next.js**       | 15      | App Router, Server Actions, and Turbopack |
+| **React**         | 19      | Latest stable                             |
+| **TypeScript**    | 5.8     | Strong types everywhere                   |
+| **TanStack Form** | 1.12.3  | Headless, minimal, type-safe forms        |
+| **Zod**           | 3.x     | Runtime + compile-time validation         |
+| **shadcn/ui**     | –       | Clean, accessible UI components           |
 | **Tailwind CSS**  | 4       | Utility-first styling                     |
 
 ---
 
-## Why TanStack Form instead of React Hook Form?
+## Why I use TanStack Form instead of React Hook Form
 
-- **First-class TypeScript** support — fully typed field and submit payloads.
-- **Zero dependencies & headless** — keep your bundle lean and bring your own UI.
-- **Composable API** — similar to TanStack Query; subscribe only to what you need.
-- **Fine-grained re-render control** using field-level subscriptions.
-- **Framework-agnostic core** — works with React, Vue, Svelte, Solid, and more.
+Though I’ve used React Hook Form in many projects and it’s served me well, I can’t ignore what TanStack Form has to offer. It’s tiny (around 9 kB gzipped), has zero runtime dependencies, and gives me more control over how forms work — without relying on hidden context or magic.
 
-Though I’ve used React Hook Form in many projects and it has served me well, I can’t ignore what TanStack Form has to offer. It’s small (around 9 kB gzipped), has no runtime dependencies, and gives me full control over how my forms behave — without relying on hidden context or magic.
+It uses `@tanstack/store` under the hood, so I can subscribe to specific fields and avoid unnecessary re-renders. That alone has solved a few issues I’ve run into with React Hook Form before.
 
-It uses `@tanstack/store` under the hood, which means I can subscribe to specific fields and avoid unnecessary re-renders. That alone has solved a few headaches I’ve run into with React Hook Form in the past.
-
-The API is fully type-safe with excellent TypeScript support, and since I already work a lot with TanStack Query, the developer experience feels familiar. It’s headless, composable, and doesn’t lock me into a specific UI — which makes it a great fit for how I like to build.
-
----
-
-## Why Zod for validation?
-
-- **Single source of truth**: schema powers both TS types and runtime checks.
-- **Tiny & tree-shakeable** compared to Yup/Joi.
-- Excellent **integration with TanStack Form’s `schema` option**.
-- Superb error-handling and custom refinement support.
+The API is fully typed, clean, and familiar if you’ve used TanStack Query. It doesn’t force me into a UI pattern and gives me the freedom to build forms the way I like — which makes it a better fit for how I build apps.
 
 ---
 
 ## Folder Structure
+
+_coming soon…_
+
+---
+
+Let me know if you want this demo extended or explained in more depth — happy to keep exploring TanStack Form.
