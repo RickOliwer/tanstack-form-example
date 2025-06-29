@@ -11,6 +11,7 @@ import {
 } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { defaultSignUpValues, SignUpSchema } from "@/types/sign-up";
+import { PasswordField } from "./form/ui/password-field";
 
 export const SignUp = () => {
   const form = useAppForm({
@@ -74,20 +75,25 @@ export const SignUp = () => {
 
             <form.AppField name="password">
               {(field) => (
-                <field.TextField
-                  label="Password"
-                  placeholder="Password"
-                  type="password"
-                />
+                <field.PasswordField label="Password" placeholder="Password" />
               )}
             </form.AppField>
             <form.AppField name="confirmPassword">
               {(field) => (
-                <field.TextField
+                <field.PasswordField
                   label="Confirm Password"
                   placeholder="Confirm Password"
                 />
               )}
+            </form.AppField>
+            <form.AppField name="terms">
+              {(field) => <field.CheckboxField label="Terms" />}
+            </form.AppField>
+            <form.AppField name="privacyPolicy">
+              {(field) => <field.CheckboxField label="Privacy Policy" />}
+            </form.AppField>
+            <form.AppField name="newsletter">
+              {(field) => <field.CheckboxField label="Newsletter" />}
             </form.AppField>
           </div>
           <div className="pt-6">
