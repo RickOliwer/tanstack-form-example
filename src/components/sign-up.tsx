@@ -5,6 +5,7 @@ import {
   CardAction,
   CardContent,
   CardDescription,
+  CardFooter,
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
@@ -18,23 +19,28 @@ export const SignUp = () => {
       onChange: SignUpSchema,
     },
     onSubmit: async ({ value }) => {
-      await new Promise((res) => setTimeout(res, 1000));
-      console.log("Form submitted:", value);
+      try {
+        // Simulate API call
+        await new Promise((res) => setTimeout(res, 1000));
+        console.log("Form submitted:", value);
 
-      form.reset();
+        // Show success message or redirect
+        // router.push('/welcome') or show toast
+        form.reset();
+      } catch (error) {
+        // Handle submission errors
+        console.error("Sign up failed:", error);
+      }
     },
   });
 
   return (
-    <Card className="w-full max-w-sm">
+    <Card className="w-full max-w-md">
       <CardHeader>
-        <CardTitle>Login to your account</CardTitle>
+        <CardTitle>Create Account</CardTitle>
         <CardDescription>
-          Enter your email below to login to your account
+          Join us today! Fill in your details to get started.
         </CardDescription>
-        <CardAction>
-          <Button variant="link">Sign Up</Button>
-        </CardAction>
       </CardHeader>
       <form
         onSubmit={(e) => {
@@ -51,30 +57,19 @@ export const SignUp = () => {
                   <field.TextField
                     label="First Name"
                     placeholder="First Name"
-                    disablFieldError
                   />
                 )}
               </form.AppField>
 
               <form.AppField name="lastName">
                 {(field) => (
-                  <field.TextField
-                    label="Last Name"
-                    placeholder="Last Name"
-                    disablFieldError
-                  />
+                  <field.TextField label="Last Name" placeholder="Last Name" />
                 )}
               </form.AppField>
             </div>
 
             <form.AppField name="email">
-              {(field) => (
-                <field.TextField
-                  label="Email"
-                  placeholder="Email"
-                  disablFieldError
-                />
-              )}
+              {(field) => <field.TextField label="Email" placeholder="Email" />}
             </form.AppField>
 
             <form.AppField name="password">
@@ -83,7 +78,14 @@ export const SignUp = () => {
                   label="Password"
                   placeholder="Password"
                   type="password"
-                  disablFieldError
+                />
+              )}
+            </form.AppField>
+            <form.AppField name="confirmPassword">
+              {(field) => (
+                <field.TextField
+                  label="Confirm Password"
+                  placeholder="Confirm Password"
                 />
               )}
             </form.AppField>
@@ -95,6 +97,16 @@ export const SignUp = () => {
           </div>
         </CardContent>
       </form>
+      <CardFooter>
+        <CardAction>
+          <span className="text-muted-foreground text-sm">
+            Already have an account?{" "}
+            <Button variant="link" className="h-auto p-0 font-semibold">
+              Sign In
+            </Button>
+          </span>
+        </CardAction>
+      </CardFooter>
     </Card>
   );
 };
