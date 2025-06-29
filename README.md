@@ -37,3 +37,5 @@ _coming soon…_
 ---
 
 Let me know if you want this demo extended or explained in more depth — happy to keep exploring TanStack Form.
+
+<meta name="google-site-verification" content="xI1lhRqMRWs6nObrrItzNzC8nJ43VUezOfYDakGLly0" />
