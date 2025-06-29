@@ -3,6 +3,7 @@ import { TextField } from "../ui/text-field";
 import { CheckboxField } from "../ui/checkbox-field";
 import { SubmitButton } from "../ui/submit-button";
 import { PasswordField } from "../ui/password-field";
+import { SelectField } from "../ui/select-field";
 
 export const { fieldContext, useFieldContext, formContext, useFormContext } =
   createFormHookContexts();
@@ -12,6 +13,7 @@ export const { useAppForm } = createFormHook({
     TextField,
     CheckboxField,
     PasswordField,
+    SelectField,
   },
   formComponents: {
     SubmitButton,

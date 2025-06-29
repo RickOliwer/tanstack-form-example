@@ -10,8 +10,11 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { defaultSignUpValues, SignUpSchema } from "@/types/sign-up";
-import { PasswordField } from "./form/ui/password-field";
+import {
+  CountryOptions,
+  defaultSignUpValues,
+  SignUpSchema,
+} from "@/types/sign-up";
 
 export const SignUp = () => {
   const form = useAppForm({
@@ -65,6 +68,19 @@ export const SignUp = () => {
               <form.AppField name="lastName">
                 {(field) => (
                   <field.TextField label="Last Name" placeholder="Last Name" />
+                )}
+              </form.AppField>
+            </div>
+            <div className="w-full">
+              <form.AppField name="country">
+                {(field) => (
+                  <field.SelectField
+                    label="Country"
+                    options={CountryOptions}
+                    placeholder="Select Country"
+                    allowEmpty
+                    emptyLabel="Select Country"
+                  />
                 )}
               </form.AppField>
             </div>

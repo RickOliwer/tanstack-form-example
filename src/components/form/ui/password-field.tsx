@@ -1,7 +1,7 @@
 "use client";
 
 import * as React from "react";
-import { Eye, EyeClosed, EyeOff } from "lucide-react";
+import { Eye, EyeClosed } from "lucide-react";
 import { useFieldContext } from "@/components/form/hook/useAppForm";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
